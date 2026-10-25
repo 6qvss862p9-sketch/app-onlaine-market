@@ -21,17 +21,17 @@ export default function TabNavigator() {
         headerShown: false,
         tabBarActiveTintColor: colors.primary,
         tabBarInactiveTintColor: colors.dark,
-        tabBarLabelStyle: { fontFamily: 'Poppins_600SemiBold', fontSize: 11 },
+        tabBarLabelStyle: { fontFamily: 'Montserrat_600SemiBold', fontSize: 11 },
         tabBarIcon: ({ color, size }) => (
           <Ionicons name={icons[route.name]} size={size} color={color} />
         ),
       })}
     >
-      <Tab.Screen name="Shop" component={HomeScreen} />
-      <Tab.Screen name="Explore" component={PlaceholderScreen} />
-      <Tab.Screen name="Cart" component={PlaceholderScreen} />
-      <Tab.Screen name="Favourite" component={PlaceholderScreen} />
-      <Tab.Screen name="Account" component={PlaceholderScreen} />
+      <Tab.Screen name="Shop" component={HomeScreen} options={{ title: 'Дүкен' }} />
+      <Tab.Screen name="Explore" component={PlaceholderScreen} options={{ title: 'Каталог' }} initialParams={{ title: 'Каталог' }} />
+      <Tab.Screen name="Cart" component={PlaceholderScreen} options={{ title: 'Себет' }} initialParams={{ title: 'Себет' }} />
+      <Tab.Screen name="Favourite" component={PlaceholderScreen} options={{ title: 'Таңдаулы' }} initialParams={{ title: 'Таңдаулы' }} />
+      <Tab.Screen name="Account" component={PlaceholderScreen} options={{ title: 'Профиль' }} initialParams={{ title: 'Профиль' }} />
     </Tab.Navigator>
   );
 }

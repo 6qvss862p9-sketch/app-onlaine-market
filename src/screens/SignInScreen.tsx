@@ -8,10 +8,10 @@ export default function SignInScreen({ navigation }: any) {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Loging</Text>
-      <Text style={styles.sub}>Enter your emails and password</Text>
+      <Text style={styles.title}>Кіру</Text>
+      <Text style={styles.sub}>Email мен құпиясөзіңізді енгізіңіз</Text>
 
-      <Text style={styles.label}>Email</Text>
+      <Text style={styles.label}>Электрондық пошта</Text>
       <TextInput
         style={styles.input}
         value={email}
@@ -20,7 +20,7 @@ export default function SignInScreen({ navigation }: any) {
         autoCapitalize="none"
       />
 
-      <Text style={styles.label}>Password</Text>
+      <Text style={styles.label}>Құпиясөз</Text>
       <TextInput
         style={styles.input}
         value={password}
@@ -29,12 +29,12 @@ export default function SignInScreen({ navigation }: any) {
       />
 
       <TouchableOpacity style={styles.btn} onPress={() => navigation.replace('Main')}>
-        <Text style={styles.btnText}>Log In</Text>
+        <Text style={styles.btnText}>Кіру</Text>
       </TouchableOpacity>
 
       <TouchableOpacity onPress={() => navigation.navigate('SignUp')}>
         <Text style={styles.link}>
-          Don't have an account? <Text style={{ color: colors.primary }}>Signup</Text>
+          Аккаунтыңыз жоқ па? <Text style={{ color: colors.primary }}>Тіркелу</Text>
         </Text>
       </TouchableOpacity>
     </View>
@@ -43,11 +43,11 @@ export default function SignInScreen({ navigation }: any) {
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: colors.white, padding: 25, justifyContent: 'center' },
-  title: { fontSize: 26, color: colors.dark, fontFamily: 'Poppins_600SemiBold' },
-  sub: { color: colors.grey, marginBottom: 30, fontFamily: 'Poppins_400Regular' },
-  label: { color: colors.grey, marginTop: 20, fontFamily: 'Poppins_600SemiBold' },
+  title: { fontSize: 26, color: colors.dark, fontFamily: 'Montserrat_600SemiBold' },
+  sub: { color: colors.grey, marginBottom: 30, fontFamily: 'Montserrat_400Regular' },
+  label: { color: colors.grey, marginTop: 20, fontFamily: 'Montserrat_600SemiBold' },
   input: { borderBottomWidth: 1, borderColor: '#E2E2E2', paddingVertical: 10, fontSize: 16 },
   btn: { backgroundColor: colors.primary, paddingVertical: 20, borderRadius: 19, alignItems: 'center', marginTop: 40 },
-  btnText: { color: colors.white, fontSize: 18, fontFamily: 'Poppins_600SemiBold' },
-  link: { textAlign: 'center', marginTop: 25, fontFamily: 'Poppins_600SemiBold', color: colors.dark },
+  btnText: { color: colors.white, fontSize: 18, fontFamily: 'Montserrat_600SemiBold' },
+  link: { textAlign: 'center', marginTop: 25, fontFamily: 'Montserrat_600SemiBold', color: colors.dark },
 });
