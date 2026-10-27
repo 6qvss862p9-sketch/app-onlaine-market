@@ -33,7 +33,7 @@ export default function SignUpScreen({ navigation }: any) {
 
       <TouchableOpacity onPress={() => navigation.goBack()}>
         <Text style={styles.link}>
-          Аккаунтыңыз бар ма? <Text style={{ color: colors.primary }}>Кіру</Text>
+          Aккaунтыңыз бaр мa? <Text style={{ color: colors.primary }}>Кірy</Text>
         </Text>
       </TouchableOpacity>
     </View>
