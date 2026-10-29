@@ -32,12 +32,12 @@ export default function TabNavigator() {
       })}
     >
       <Tab.Screen name="Shop" component={HomeScreen} options={{ title: 'Дүкен' }} />
-      <Tab.Screen name="Explore" component={PlaceholderScreen} options={{ title: 'Каталог' }} initialParams={{ title: 'Каталог' }} />
+      <Tab.Screen name="Explore" component={PlaceholderScreen} options={{ title: 'Каталог' }} initialParams={{ title: 'Кaтaлoг' }} />
       <Tab.Screen
         name="Cart"
         component={CartScreen}
         options={{
-          title: 'Себет',
+          title: 'Сeбeт',
           tabBarBadge: count > 0 ? count : undefined,
           tabBarBadgeStyle: { backgroundColor: colors.primary },
         }}
