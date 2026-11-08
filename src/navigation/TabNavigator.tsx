@@ -1,8 +1,10 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
 import HomeScreen from '../screens/HomeScreen';
+import ExploreScreen from '../screens/ExploreScreen';
 import CartScreen from '../screens/CartScreen';
-import PlaceholderScreen from '../screens/PlaceholderScreen';
+import FavouriteScreen from '../screens/FavouriteScreen';
+import AccountScreen from '../screens/AccountScreen';
 import { useCart } from '../context/CartContext';
 import { colors } from '../constants/colors';
 
@@ -32,18 +34,18 @@ export default function TabNavigator() {
       })}
     >
       <Tab.Screen name="Shop" component={HomeScreen} options={{ title: 'Дүкен' }} />
-      <Tab.Screen name="Explore" component={PlaceholderScreen} options={{ title: 'Каталог' }} initialParams={{ title: 'Кaтaлoг' }} />
+      <Tab.Screen name="Explore" component={ExploreScreen} options={{ title: 'Каталог' }} />
       <Tab.Screen
         name="Cart"
         component={CartScreen}
         options={{
-          title: 'Сeбeт',
+          title: 'Себет',
           tabBarBadge: count > 0 ? count : undefined,
           tabBarBadgeStyle: { backgroundColor: colors.primary },
         }}
       />
-      <Tab.Screen name="Favourite" component={PlaceholderScreen} options={{ title: 'Таңдаулы' }} initialParams={{ title: 'Таңдаулы' }} />
-      <Tab.Screen name="Account" component={PlaceholderScreen} options={{ title: 'Профиль' }} initialParams={{ title: 'Профиль' }} />
+      <Tab.Screen name="Favourite" component={FavouriteScreen} options={{ title: 'Таңдаулы' }} />
+      <Tab.Screen name="Account" component={AccountScreen} options={{ title: 'Профиль' }} />
     </Tab.Navigator>
   );
 }
