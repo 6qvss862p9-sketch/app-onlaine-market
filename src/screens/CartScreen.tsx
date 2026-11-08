@@ -10,13 +10,13 @@ export default function CartScreen() {
   const { items, changeQty, removeItem, clearCart, total } = useCart();
 
   const handleOrder = () => {
-    Alert.alert('Тапсырыс қабылданды', 'Рақмет! Тапсырысыңыз жолда.');
+    Alert.alert('Тaпсырыс қaбылданды', 'Рақмет! Тапсырысыңыз жолда.');
     clearCart();
   };
 
   return (
     <View style={[styles.container, { paddingTop: insets.top + 10 }]}>
-      <Text style={styles.title}>Менің себетім</Text>
+      <Text style={styles.title}>Мeнің себетім</Text>
 
       {items.length === 0 ? (
         <View style={styles.empty}>
