@@ -5,8 +5,8 @@ import OnboardingScreen from '../screens/OnboardingScreen';
 import SignInScreen from '../screens/SignInScreen';
 import SignUpScreen from '../screens/SignUpScreen';
 import ProductDetailScreen from '../screens/ProductDetailScreen';
-import TabNavigator from './TabNavigator';
 import OrderAcceptedScreen from '../screens/OrderAcceptedScreen';
+import TabNavigator from './TabNavigator';
 
 export type RootStackParamList = {
   Splash: undefined;
@@ -15,6 +15,7 @@ export type RootStackParamList = {
   SignUp: undefined;
   Main: undefined;
   ProductDetail: { id: string };
+  OrderAccepted: { total: number };
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -29,6 +30,7 @@ export default function AppNavigator() {
         <Stack.Screen name="SignUp" component={SignUpScreen} />
         <Stack.Screen name="Main" component={TabNavigator} />
         <Stack.Screen name="ProductDetail" component={ProductDetailScreen} />
+        <Stack.Screen name="OrderAccepted" component={OrderAcceptedScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
