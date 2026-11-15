@@ -20,6 +20,15 @@ export default function HomeScreen({ navigation }: any) {
         <TextInput placeholder="Дүкеннен іздеу" style={styles.searchInput} />
       </View>
 
+      <View style={styles.banner}>
+        <View style={{ flex: 1 }}>
+          <Text style={styles.bannerSmall}>Жаңа тапсырысқа</Text>
+          <Text style={styles.bannerBig}>-20% жеңілдік</Text>
+          <Text style={styles.bannerSmall}>Көкөніс пен жемістерге</Text>
+        </View>
+        <Text style={styles.bannerEmoji}>🥬</Text>
+      </View>
+
       <Text style={styles.section}>Айрықша ұсыныс</Text>
 
       <FlatList
@@ -45,5 +54,9 @@ const styles = StyleSheet.create({
   locationText: { fontSize: 18, marginLeft: 5, fontFamily: 'Montserrat_600SemiBold', color: colors.dark },
   search: { flexDirection: 'row', alignItems: 'center', backgroundColor: colors.light, borderRadius: 15, paddingHorizontal: 15, height: 50 },
   searchInput: { flex: 1, marginLeft: 10, fontFamily: 'Montserrat_400Regular' },
+  banner: { flexDirection: 'row', alignItems: 'center', backgroundColor: '#E6F4EA', borderRadius: 18, padding: 20, marginTop: 20 },
+  bannerSmall: { color: colors.grey, fontSize: 13, fontFamily: 'Montserrat_400Regular' },
+  bannerBig: { fontSize: 22, color: colors.primary, marginVertical: 4, fontFamily: 'Montserrat_600SemiBold' },
+  bannerEmoji: { fontSize: 64 },
   section: { fontSize: 22, marginVertical: 20, color: colors.dark, fontFamily: 'Montserrat_600SemiBold' },
 });

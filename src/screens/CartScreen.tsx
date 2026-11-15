@@ -1,22 +1,23 @@
-import { View, Text, FlatList, StyleSheet, TouchableOpacity, Alert } from 'react-native';
+import { View, Text, FlatList, StyleSheet, TouchableOpacity } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import { colors } from '../constants/colors';
 import { useCart } from '../context/CartContext';
 import { formatPrice } from '../utils/format';
 
-export default function CartScreen() {
+export default function CartScreen({ navigation }: any) {
   const insets = useSafeAreaInsets();
   const { items, changeQty, removeItem, clearCart, total } = useCart();
 
   const handleOrder = () => {
-    Alert.alert('Тaпсырыс қaбылданды', 'Рақмет! Тапсырысыңыз жолда.');
+    const sum = total;
     clearCart();
+    navigation.navigate('OrderAccepted', { total: sum });
   };
 
   return (
     <View style={[styles.container, { paddingTop: insets.top + 10 }]}>
-      <Text style={styles.title}>Мeнің себетім</Text>
+      <Text style={styles.title}>Менің себетім</Text>
 
       {items.length === 0 ? (
         <View style={styles.empty}>
