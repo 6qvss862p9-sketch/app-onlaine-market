@@ -6,6 +6,7 @@ import SignInScreen from '../screens/SignInScreen';
 import SignUpScreen from '../screens/SignUpScreen';
 import ProductDetailScreen from '../screens/ProductDetailScreen';
 import TabNavigator from './TabNavigator';
+import OrderAcceptedScreen from '../screens/OrderAcceptedScreen';
 
 export type RootStackParamList = {
   Splash: undefined;
