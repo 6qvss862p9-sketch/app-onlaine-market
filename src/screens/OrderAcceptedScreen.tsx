@@ -15,13 +15,7 @@ export default function OrderAcceptedScreen({ route, navigation }: any) {
       <View style={styles.center}>
         <Text style={styles.emoji}>✅</Text>
         <Text style={styles.title}>Тапсырысыңыз{'\n'}қабылданды</Text>
-<<<<<<< HEAD
-        <Text style={styles.sub}>
-          Азық-түлігіңіз жақын арада жеткізіледі.
-        </Text>
-=======
         <Text style={styles.sub}>Азық-түлігіңіз жақын арада жеткізіледі.</Text>
->>>>>>> 1d7635e (https://github.com/6qvss862p9-sketch/app-onlaine-market.git)
         <Text style={styles.sum}>Сомасы: {formatPrice(total)}</Text>
       </View>
 
@@ -41,3 +35,4 @@ const styles = StyleSheet.create({
   sum: { marginTop: 20, fontSize: 18, color: colors.primary, fontFamily: 'Montserrat_600SemiBold' },
   btn: { backgroundColor: colors.primary, paddingVertical: 20, borderRadius: 19, alignItems: 'center' },
   btnText: { color: colors.white, fontSize: 18, fontFamily: 'Montserrat_600SemiBold' },
+});
